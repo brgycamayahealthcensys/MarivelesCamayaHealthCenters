@@ -1,1 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camaya Health Center</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+            user-select: none;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            color: black;
+            border-bottom: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }header img {
+            width: 60px;
+            height: 60px;
+        }header h1 {
+            font-size: 30px;
+            color: green;
+            margin-left: 10px;
+        }header nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }header nav a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }header nav a:hover {
+            text-decoration: underline;
+            color: green;
+        }
 
+        .background {
+            background: url('Images/background.png') center/cover no-repeat;
+            background-color: rgba(10, 77, 10, 0.45);
+            background-blend-mode: overlay;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .Welcomepage h3 {
+            font-size: 30px;
+            margin: 10px 0;
+        }.Welcomepage h1 {
+            font-size: 80px;
+            margin: 10px 0;
+            animation: fadeIn 3s;
+        }.Welcomepage p {
+            font-style: italic;
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }.buttons button {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 15px 35px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+        }.buttons button:hover {
+            background-color: white;
+            color: green;
+        }
+
+        .Hotline {
+            margin-top: 80px;
+        }
+
+        .page2 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 80px 20px;
+        }.page2 h1 {
+            font-size: 40px;
+            color: green;
+        }.page2 h2 {
+            font-size: 30px;
+            color: black;
+            font-weight: bolder;
+        }.page2 h3 {
+            font-size: 20px;
+            font-style: italic;
+            margin: 20px auto;
+            max-width: 800px;
+            color: rgb(15, 12, 12);
+        }.page2 p {
+            font-size: 18px;
+            margin: 0 auto 40px;
+            max-width: 800px;
+            color: rgb(85, 83, 83);
+            text-align: justify;
+        }.page2 img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .btn1 button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+        }.btn1 button:hover {
+            background-color: white;
+            border: 1px solid green;
+            color: green;
+        }
+
+        .page3 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 80px 20px;
+        }.page3 h1 {
+            color: green;
+            font-size: 50px;
+            font-weight: bold;
+        }.page3 p {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #333;
+        }.grid-panels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        .rows {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+
+        .panels {
+            background-color: #2b2d2f;
+            border: 3px solid #000;
+            border-radius: 12px;
+            width: 500px;     
+            height: 330px;    
+            overflow: hidden;  
+            position: relative;
+        }
+
+        .panels img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;   
+            display: block;
+        }
+
+        .panel {
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+            padding: 20px;
+            transition: 0.3s ease;
+        }.panel:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+        }.panel img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto 10px;
+        }
+        
+
+        .main-map {
+            width: 40%;
+            max-width: 1600px;
+            height: 450px;
+            border: 0;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+        }
+
+        .street-view {
+            width: 1000px;
+            max-width: 95%;
+            height: 900px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        .street-view-wrapper {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .iframe-section, .iframe {
+            text-align: center;
+            margin-bottom: 40px;
+        }.layout {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }.box {
+            flex: 1;
+            background-color: #2b2d2f;
+            border: 3px solid #000;
+            border-radius: 12px;
+            height: 600px; 
+            position: relative;
+            overflow: hidden;
+        }.box iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        @media(max-width: 900px) {
+            .layout {
+                flex-direction: column;
+            }
+        }
+
+        .Links {
+            height: 200px;
+            background-color: green;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            font-size: 20px;
+            background-color: green;
+            border-top: 2px solid #ddd;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="Images/Logo.png" alt="Logo">
+            <h1>CAMAYA</h1>
+        </div>
+        <nav>
+            <a href="Mainpage.html" style="color: green; text-decoration-line: underline;">Home</a>
+            <a href="Service.html">Service</a>
+            <a href="History.html">History</a>
+            <a href="Accomplishment.html">Accomplishment</a>
+            <a href="FAQs.html">FAQs</a>
+        </nav>
+    </header>
+
+    <section class="Welcomepage background">
+        <h3>Welcome to</h3>
+        <h1>Camaya Health Center</h1>
+        <p>“Kaagapay ninyo sa bawat hakbang tungo sa malusog na pamumuhay.”</p>
+        <div class="buttons">
+            <button onclick="location.href='QCamayaHealthCenter.html'">Learn more</button>
+            <button onclick="location.href='Service.html'">Service</button>
+        </div>
+        <div class="Hotline">
+            <img src="Images/Hotline.png" alt="Hotline">
+        </div>
+    </section>
+
+    <section class="page2">
+        <img src="Icon.png" alt="Barangay Captain">
+        <h1>Meet the Brgy. Captain</h1>
+        <h2>AMADO GABRIEL DIMAFILES JR.</h2>
+        <h3>"A true leader does not create separation, a true leader brings people together." - Tendai Ruben Mbofana</h3>
+        <p>Barangay Captain Celso M. Solano, an accomplished advocate for working people and a proud product of the District. Barangay Captain Celso M. Solano started serving since undefined. <br>Learn more about Barangay Captain Celso M. Solano and read his blog.</p>
+        <div class="btn1">
+            <button onclick="location.href='BrgyCaptain.html'">Learn More</button>
+        </div>
+    </section>
+
+    <section class="page3"> 
+        <h1>Meet Our Barangay Officials</h1>
+        <p>Dedicated individuals leading our community with passion and service.</p>
+
+        <div class="grid-panels"> 
+            <div class="panel"><img src="Icon.png"><h2>SONSALVADOR SANTOS VISITACION JR.</h2><p>KAGAWAD</p></div>
+            <div class="panel"><img src="Icon.png"><h2>LARRY BRAVO MAGABO</h2><p>KAGAWAD</p></div>
+            <div class="panel"><img src="Icon.png"><h2>NELSON DE GUZMAN RESO</h2><p>KAGAWAD</p></div>
+            <div class="panel"><img src="Icon.png"><h2>MARY ANN NAVARRA BELARDO</h2><p>KAGAWAD</p></div>
+            <div class="panel"><img src="Icon.png"><h2>DANILO MEJOS CARIÑO SR.</h2><p>KAGAWAD</p></div>
+            <div class="panel"><img src="Icon.png"><h2>GILBERT EMAYSAY AMBROCIO</h2><p>KAGAWAD</p></div>
+            <div class="panel"><img src="Icon.png"><h2>AQUILINO MEJOS CONCEPCION JR.</h2><p>KAGAWAD</p></div>
+            <div class="panel"><img src="Icon.png"><h2>MIKE JOSE DE LEON DELAVIN</h2><p>SK CHAIRPERSON</p></div>
+            <div class="panel"><img src="Icon.png"><h2>JHON MARK PARAISO GABATINO</h2><p>BRGY SECRETARY</p></div>
+            <div class="panel"><img src="Icon.png"><h2>RICA PALMA EXTRIMADURA</h2><p>BRGY TREASURER</p></div>
+        </div>
+    </section>
+
+    <h1 style="text-align: center">CAMAYA HEALTH CENTER I | ZONE II CAMAYA</h1>
+    <div class="layout">
+    <div class="box">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4726.136906301362!2d120.48649325004965!3d14.436648550286968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339618d469fb81df%3A0xfd86e91622d6cd45!2sC.%20Rodriguez%20St%2C%20Mariveles%2C%20Bataan!5e1!3m2!1sen!2sph!4v1763314410223!5m2!1sen!2sph"
+            frameborder="0"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+
+
+    <div class="box">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sph!4v1763314677811!5m2!1sen!2sph!6m8!1m7!1sX5XlNRJUbJuPSiKsJsXzww!2m2!1d14.4369399044393!2d120.485983625942!3f144.79335!4f0!5f1.1924812503605782"
+            frameborder="0"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+    <div class="rows">
+        <div class="panels">
+            <img src="Images/CamayaIMG1Z2.png" alt="Img1">
+        </div>
+
+        <div class="panels">
+            <img src="Images/CamayaIMGZ2.png" alt="Img2">
+        </div>
+
+        <div class="panels">
+            <img src="Images/CamayaIMG3Z2.png" alt="Img3">
+        </div>
+    </div>
+
+
+
+<h1 style="text-align: center;">CENTER 2 - Tesda road, Zalavarria St. Mariveles, Bataan</h1>
+    <div class="layout">
+    
+    <div class="box">
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4734.378460358117!2d120.48625888823356!3d14.438395446781216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339618d6aa7bd9bf%3A0xbef1edca2631288a!2sTechnical%20Education%20and%20Skills%20Development%20Authority%20Regional%20Training%20Center!5e1!3m2!1sen!2sph!4v1763353977166!5m2!1sen!2sph"
+        frameborder="0"
+        allowfullscreen 
+        loading="lazy">
+    </iframe>
+    </div>
+
+    <div class="box">
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!4v1763354135935!6m8!1m7!1sjmAJknFWQcYjbUDw-eOvUw!2m2!1d14.43763402993987!2d120.4882198477084!3f259.34847731546415!4f-2.8017259205489324!5f0.7820865974627469"
+        frameborder="0"
+        allowfullscreen 
+        loading="lazy">
+    </iframe>
+    </div>
+</div>
+
+    <div class="rows">
+        <div class="panels">
+            <img src="Images/CAMAYAZ2Tes1.png" alt="Img1">
+        </div>
+
+        <div class="panels">
+            <img src="Images/CAMAYAZ2Tes2.png" alt="Img2">
+        </div>
+
+        <div class="panels">
+            <img src="Images/CAMAYAZ2Tes3.png" alt="Img3">
+        </div>
+    </div>
+
+<h1 style="text-align: center;">CENTER 3 - ZONE 6 CAMAYA BASKETBALL COURT</h1>
+    <div class="layout">
+    
+    <div class="box">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d752.6072651764896!2d120.48051224310431!3d14.444018217074703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339619247c36c23f%3A0xf16100903bbc2c55!2sZone%206%20Camaya%20Basketball%20Court!5e1!3m2!1sen!2sph!4v1763354311110!5m2!1sen!2sph"
+        frameborder="0"
+        allowfullscreen 
+        loading="lazy">
+    </iframe>
+    </div>
+
+    
+    <div class="box">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!4v1763354411478!6m8!1m7!1s_U_FtDBjYqTeyPctuwrMNA!2m2!1d14.44399905918182!2d120.4806457277355!3f107.19856448510629!4f-2.8980759233950977!5f0.4000000000000002"
+        frameborder="0"
+        allowfullscreen 
+        loading="lazy">
+    </iframe>
+    </div>
+</div>
+
+    <div class="rows" style="margin-bottom: 40px;">
+        <div class="panels">
+            <img src="Images/CAMAYAH3.png" alt="Img1">
+        </div>
+
+        <div class="panels">
+            <img src="Images/CAMAYAH32.png" alt="Img2">
+        </div>
+
+        <div class="panels">
+            <img src="Images/CAMAYAH33.png" alt="Img3">
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2025 Camaya Health Center. All rights reserved.
+    </footer>
+</body>
+</html>

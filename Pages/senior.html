@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            color: black;
+            border-bottom: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }header img {
+            width: 60px;
+            height: 60px;
+        }header h1 {
+            font-size: 30px;
+            color: green;
+            margin-left: 10px;
+        }header nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }header nav a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }header nav a:hover {
+            text-decoration: underline;
+            color: green;
+        }
+
+        
+        .background {
+            background: url('background.png') center/cover no-repeat;
+            background-color: rgba(10, 77, 10, 0.45);
+            background-blend-mode: overlay;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        
+        .container {
+            width: 80%;
+            max-width: 1400px;
+            color: white;
+        }
+
+        h2 {
+            background: #0e7c0b;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 30px;
+        }
+
+        .layout {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        
+        .left-selects {
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            width: 250px;
+        }.left-selects select {
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            font-size: 15px;
+        }
+
+        
+        .form {
+            flex: 1;
+        }.form label {
+            display: block;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: left;
+        }.form input {
+            width: 98%;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            font-size: 15px;
+        }
+
+        .confirm {
+            margin-top: 25px;
+            display: block;
+            margin-left: auto;
+            background: white;
+            color: black;
+            padding: 12px 30px;
+            border: none;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="Logo.png" alt="Logo">
+            <h1>CAMAYA</h1>
+        </div>
+        <nav>
+            <a href="Mainpage.html">Home</a>
+            <a href="Service.html">Service</a>
+            <a href="History.html">History</a>
+        </nav>
+    </header>
+
+    <section class="background">
+    <div class="container">
+
+        <h2>Schedule Checkup for Senior</h2>
+
+        <div class="layout">
+
+            <div class="left-selects">
+                <select>
+                    <option>Select Health Center</option>
+                </select>
+
+                <select>
+                    <option>Select Date & Time</option>
+                </select>
+            </div>
+
+            <form class="form">
+                <label>Name</label>
+                <input type="text">
+
+                <label>Age</label>
+                <input type="number">
+
+                <label>Sex</label>
+                <input type="text">
+
+                <label>Contact Number</label>
+                <input type="number">
+
+                <label>Email Address</label>
+                <input type="email">
+            </form>
+
+        </div>
+
+        <button class="confirm">CONFIRM</button>
+
+    </div>
+</section>
+
+</body>
+</html>

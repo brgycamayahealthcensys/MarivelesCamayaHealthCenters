@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camaya Health Center</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+            user-select: none;
+            font-family: Arial, sans-serif;
+        }
 
+        header {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            color: black;
+            border-bottom: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }header img {
+            width: 60px;
+            height: 60px;
+        }header h1 {
+            font-size: 30px;
+            color: green;
+            margin-left: 10px;
+        }header nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }header nav a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }header nav a:hover {
+            text-decoration: underline;
+            color: green;
+        }
+
+        .page {
+            background: url(background.png);
+            background-color: rgba(10, 77, 10, 0.45);
+            background-blend-mode: overlay;
+            display: flex;
+            height: 100vh;
+            color: white;
+        }.page h1 {
+            font-family: Arial;
+            font-size: 40px;
+        }
+        .text {
+            text-align: center;
+            padding: 80px 20px 20px 20px;
+            font-size: 25px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 40px;
+            gap: 40px;
+        }
+        
+        .textimg {
+            flex: 1;
+        }.textimg h2 {
+            color: green;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .textimg p {
+            line-height: 1.6;
+            margin-bottom: 18px;
+            text-align: justify;
+        }.imgsect img {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+            .image-section img {
+                max-width: 100%;
+            }
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            font-size: 16px;
+            background-color: green;
+            border-top: 2px solid #ddd;
+            letter-spacing: 0.3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div style="display: flex; align-items: center;">
+      <img src="Logo.png" alt="Logo">
+      <h1>CAMAYA</h1>
+    </div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="Service.html">Service</a>
+      <a href="History.html"style="color: green; text-decoration-line: underline;">History</a>
+      <a href="Accomplishment.html">Accomplishment</a>
+      <a href="FAQs.html">FAQs</a>
+    </nav>
+  </header>
+
+<section class="text">
+    <p>History of Barangay Mariveles Camaya</p>
+    <h3>Welcome to Barangay Mariveles Camaya, a vibrant and inclusive community.</h3>
+  </section>
+
+
+  <div class="container">
+    <div class="textimg">
+        <h2>History of Barangay Mariveles Camaya</h2>
+        <p>Barangay Balon Anito has a rich and fascinating history that stretches back over several centuries. The name “Balon Anito” is deeply rooted in local folklore. The word "Balon" refers to a spring or a well, a vital resource for early settlers, while "Anito" is a term that refers to the ancestral spirits revered by the community. This sacred spring, according to local tradition, was the gathering place where the ancestors would honor these spirits, seeking their wisdom, protection, and blessings for prosperity.</p>
+    
+        <p>Over the years, Barangay Balon Anito evolved from a small, tight-knit community into a vibrant and dynamic neighborhood. The people of Balon Anito are known for their resilience, hard work, and strong sense of community. As the barangay expanded, it managed to preserve its rich cultural heritage while embracing the changes brought about by modernization. Today, Barangay Balon Anito serves as a living testament to the harmonious balance between honoring the past and progressing towards a brighter future.</p>
+    </div>
+
+    <div class="imgsect">
+        <img src="CAMAYAZ2Tes1.png" alt="image">
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="imgsect">
+        <img src="CAMAYAZ2Tes1.png" alt="image">
+    </div>
+
+    <div class="textimg">
+        <h2>History of Barangay Mariveles Camaya</h2>
+        <p>Barangay Balon Anito has a rich and fascinating history that stretches back over several centuries. The name “Balon Anito” is deeply rooted in local folklore. The word "Balon" refers to a spring or a well, a vital resource for early settlers, while "Anito" is a term that refers to the ancestral spirits revered by the community. This sacred spring, according to local tradition, was the gathering place where the ancestors would honor these spirits, seeking their wisdom, protection, and blessings for prosperity.</p>
+    
+        <p>Over the years, Barangay Balon Anito evolved from a small, tight-knit community into a vibrant and dynamic neighborhood. The people of Balon Anito are known for their resilience, hard work, and strong sense of community. As the barangay expanded, it managed to preserve its rich cultural heritage while embracing the changes brought about by modernization. Today, Barangay Balon Anito serves as a living testament to the harmonious balance between honoring the past and progressing towards a brighter future.</p>
+    </div>
+  </div>
+
+
+    <footer>
+        &copy; 2025 Camaya Health Center. All rights reserved.
+    </footer>
+</body>
+</html>
